@@ -799,8 +799,8 @@ footer.entry-meta .meta-in {
 .thumbnails.recentworks {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px 0; /* vertical and horizontal gap between items */
-    justify-content: flex-start;
+    gap: 36px 0; /* vertical and horizontal gap between items */
+    justify-content: center;
 }
 
 .thumbnails.recentworks > div[class^="col-"] {
