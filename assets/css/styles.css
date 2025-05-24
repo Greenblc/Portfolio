@@ -405,10 +405,8 @@ img {
 .thumbnail .img {
   display: block;
   width: 100%;
+  height: 200px; /* or whatever fits your design */
   overflow: hidden;
-  height: 180px;
-  margin: 0 0 20px;
-  position: relative;
 }
 .thumbnail .title {
   text-transform: uppercase;
@@ -455,9 +453,9 @@ img {
 }
 .thumbnail img {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: 100%;
+  object-fit: cover;
+  position: static;
 }
 .thumbnail:hover {
   color: #333;
@@ -797,15 +795,34 @@ footer.entry-meta .meta-in {
   }
 }
 .thumbnails.recentworks {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 36px 0; /* vertical and horizontal gap between items */
-    justify-content: center;
+    display: block; /* Remove flex */
+    margin-left: -16px;
+    margin-right: -16px;
 }
 
 .thumbnails.recentworks > div[class^="col-"] {
-    margin-bottom: 32px; /* vertical spacing between rows */
+    margin-bottom: 32px;
     padding-right: 16px;
     padding-left: 16px;
     box-sizing: border-box;
+}
+
+.thumbnails.recentworks .thumbnail {
+    width: 320px;      /* Set your desired width */
+    height: 380px;     /* Set your desired height */
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.thumbnails.recentworks .thumbnail .img {
+    width: 100%;
+    height: 200px; /* or whatever fits your design */
+    overflow: hidden;
+}
+.thumbnails.recentworks .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: static;
 }
