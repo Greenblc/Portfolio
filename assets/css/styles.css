@@ -797,16 +797,20 @@ footer.entry-meta .meta-in {
 .thumbnails.recentworks {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px 32px;
+  gap: 32px;
   margin-left: 0;
   margin-right: 0;
   padding: 0;
+  list-style: none;
 }
 
+.thumbnails.recentworks > li,
 .thumbnails.recentworks > div[class^="col-"] {
   margin-bottom: 0;
   padding: 0;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 .thumbnails.recentworks .thumbnail {
