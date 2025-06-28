@@ -1,0 +1,134 @@
+<main id="main">
+    <div class="container">
+        <div class="row topspace">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="blog-intro" style="margin-bottom: 30px;">
+                    <h2 style="margin-bottom: 10px;">Block Toss Game</h2>
+                    <p>
+                        In this simple game, you control a player who throws blocks at enemies. Knock all enemies off the edge to win!
+                    </p>
+                    <ul>
+                        <li><strong>Controls:</strong> Use your mouse to aim and click to throw blocks.</li>
+                        <li><strong>Goal:</strong> Knock all enemies off the platform.</li>
+                    </ul>
+                </div>
+                <div style="text-align:center; margin-bottom:30px;">
+                    <canvas id="gameCanvas" width="600" height="400" style="border:1px solid #ccc; background:#f9f9f9;"></canvas>
+                </div>
+                <p style="text-align:center;">Try to clear all the enemies!</p>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+const player = { x: 80, y: 320, r: 20 };
+const enemies = [
+    { x: 500, y: 320, r: 20, alive: true },
+    { x: 540, y: 320, r: 20, alive: true }
+];
+const blocks = [];
+const gravity = 0.5;
+const platformY = 350;
+
+function drawPlayer() {
+    ctx.fillStyle = '#3498db';
+    ctx.beginPath();
+    ctx.arc(player.x, player.y, player.r, 0, Math.PI * 2);
+    ctx.fill();
+}
+
+function drawEnemies() {
+    ctx.fillStyle = '#e74c3c';
+    enemies.forEach(e => {
+        if (e.alive) {
+            ctx.beginPath();
+            ctx.arc(e.x, e.y, e.r, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    });
+}
+
+function drawBlocks() {
+    ctx.fillStyle = '#95a5a6';
+    blocks.forEach(b => {
+        ctx.beginPath();
+        ctx.arc(b.x, b.y, 10, 0, Math.PI * 2);
+        ctx.fill();
+    });
+}
+
+function drawPlatform() {
+    ctx.fillStyle = '#888';
+    ctx.fillRect(0, platformY, canvas.width, 20);
+}
+
+function updateBlocks() {
+    blocks.forEach(b => {
+        b.x += b.vx;
+        b.y += b.vy;
+        b.vy += gravity;
+    });
+}
+
+function checkCollisions() {
+    blocks.forEach(b => {
+        enemies.forEach(e => {
+            if (e.alive) {
+                const dx = b.x - e.x;
+                const dy = b.y - e.y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < e.r + 10) {
+                    e.vx = (e.vx || 0) + b.vx * 0.5;
+                    e.vy = (e.vy || 0) + b.vy * 0.5;
+                    e.alive = false; // Knock off for simplicity
+                }
+            }
+        });
+    });
+}
+
+function updateEnemies() {
+    enemies.forEach(e => {
+        if (!e.alive) {
+            e.x += (e.vx || 0);
+            e.y += (e.vy || 0);
+            e.vy = (e.vy || 0) + gravity;
+        }
+    });
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawPlatform();
+    drawPlayer();
+    drawEnemies();
+    drawBlocks();
+}
+
+function gameLoop() {
+    updateBlocks();
+    checkCollisions();
+    updateEnemies();
+    draw();
+    requestAnimationFrame(gameLoop);
+}
+
+canvas.addEventListener('click', function(e) {
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+    const angle = Math.atan2(my - player.y, mx - player.x);
+    const speed = 10;
+    blocks.push({
+        x: player.x,
+        y: player.y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed
+    });
+});
+
+gameLoop();
+</script>
