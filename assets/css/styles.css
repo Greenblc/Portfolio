@@ -835,3 +835,37 @@ footer.entry-meta .meta-in {
   object-fit: cover;
   position: static;
 }
+/* Project Thumbnail Styles */
+.project-thumbnail {
+  display: block;
+  aspect-ratio: 3/1;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+}
+
+.project-thumbnail .img {
+  height: 100%;
+  display: block;
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-thumbnail .title {
+  padding: 10px;
+  display: block;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+  .project-thumbnail {
+    aspect-ratio: 2/1;
+    max-width: 100%;
+  }
+}
