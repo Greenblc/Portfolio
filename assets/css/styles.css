@@ -901,3 +901,49 @@ footer.entry-meta .meta-in {
 #footer a:hover {
   color: #3498db;
 }
+
+/* Dark theme thumbnail styling */
+.container .thumbnail {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+  border: 1px solid #3a3a3a;
+  color: #ecf0f1;
+}
+
+.container .thumbnail .title {
+  color: #ecf0f1;
+  padding: 15px;
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+  margin: 0;
+}
+
+.container .thumbnail .cover {
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
+.container .thumbnail .cover .more {
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Text styling for dark theme */
+.container h2, .container h3, .container h4 {
+  color: #ecf0f1;
+}
+
+.container .section-title span {
+  color: #3498db;
+}
+
+.container .thumbnail .title {
+  color: #ecf0f1;
+}
+
+.container .btn-primary {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.container .btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
