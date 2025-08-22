@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="author"      content="Christopher Greenblatt">
 
-	<title>Robotics & Low-Level Programming - Christopher's Portfolio</title>
+	<title>Mini Projects - Christopher's Portfolio</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	
@@ -59,91 +59,218 @@
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 				<div class="blog-intro" style="margin-bottom: 30px;">
-					<h2 style="margin-bottom: 10px;">Robotics & Low-Level Programming</h2>
+					<h2 style="margin-bottom: 10px;">Mini Projects & Quick Builds</h2>
 					<p>
-						Exploring the intersection of hardware control and software engineering through robotic arm programming. These projects showcase direct motor control, servo communication protocols, and real-time movement coordination using low-level programming techniques.
+						A collection of small experiments, weekend projects, and quick technical challenges. These mini projects showcase different programming languages, tools, and creative problem-solving approaches in bite-sized demonstrations.
 					</p>
 					<ul>
-						<li><strong>Hardware:</strong> 6-DOF Robotic Arms, Arduino/Raspberry Pi Controllers</li>
-						<li><strong>Programming:</strong> C/C++, Python with hardware libraries, direct register manipulation</li>
-						<li><strong>Protocols:</strong> I2C, SPI, PWM signal generation, UART communication</li>
+						<li><strong>Languages:</strong> Python, JavaScript, C++, Bash, HTML/CSS</li>
+						<li><strong>Tools:</strong> APIs, Web frameworks, Command line utilities, Automation scripts</li>
+						<li><strong>Focus:</strong> Rapid prototyping, learning new technologies, solving specific problems</li>
 					</ul>
 				</div>
 
-				<!-- Demo 1: Robot Arm Drawing -->
+				<!-- Project 1: API Weather Dashboard -->
 				<div class="blog-highlight" style="margin-bottom: 50px; border: 1px solid #ddd; border-radius: 8px; padding: 24px; background: #fafbfc; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-					<h3 style="margin-bottom: 20px; color: #2c5aa0;">Demo 1: Precision Drawing Robot</h3>
+					<h3 style="margin-bottom: 20px; color: #2c5aa0;">🌤️ Weather API Dashboard</h3>
 					<div class="row">
 						<div class="col-sm-6">
-							<div style="background: #f0f0f0; border: 2px dashed #ccc; padding: 30px; border-radius: 8px; text-align: center;">
-								<h4 style="color: #666; margin-bottom: 15px;">🤖 Robot Drawing Demo</h4>
-								<p style="color: #888;">Video placeholder for robot arm drawing patterns</p>
-								<div style="width: 100%; height: 200px; background: #ddd; margin: 15px auto; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
-									<span style="color: #999; font-size: 1.1em;">Robot Arm Drawing Video</span>
+							<div style="background: linear-gradient(135deg, #74b9ff, #0984e3); border-radius: 8px; padding: 20px; text-align: center; color: white; margin-bottom: 20px;">
+								<h4 style="margin-bottom: 15px;">☀️ Atlanta, GA</h4>
+								<div style="font-size: 2.5em; margin: 15px 0;">72°F</div>
+								<p style="margin: 0; opacity: 0.9;">Partly Cloudy • Feels like 75°F</p>
+								<div style="display: flex; justify-content: space-around; margin-top: 15px; font-size: 0.9em;">
+									<span>🌡️ H:78° L:65°</span>
+									<span>💨 12mph</span>
+									<span>💧 45%</span>
 								</div>
-								<p style="color: #888; font-size: 0.9em;">Watch the robot arm draw geometric patterns with precision</p>
 							</div>
+							<p style="color: #888; font-size: 0.9em; text-align: center;">Live weather data with styled interface</p>
 						</div>
 						<div class="col-sm-6">
-							<h4>Project Overview</h4>
+							<h4>Quick Build Overview</h4>
 							<p>
-								<strong>Programming a 6-DOF robotic arm to draw precise geometric patterns and artwork.</strong> This project required implementing inverse kinematics, path planning, and real-time motor control to achieve smooth, accurate movements.
+								<strong>A clean weather dashboard that pulls live data from OpenWeatherMap API.</strong> Built in an afternoon to practice API integration and create a useful desktop widget.
 							</p>
 							
-							<h5>Technical Challenges:</h5>
+							<h5>Features:</h5>
 							<ul>
-								<li><strong>Inverse Kinematics:</strong> Mathematical calculation of joint angles for desired end-effector positions</li>
-								<li><strong>Path Interpolation:</strong> Smooth trajectory generation between waypoints</li>
-								<li><strong>Motor Synchronization:</strong> Coordinating multiple servo motors for fluid motion</li>
-								<li><strong>Precision Control:</strong> Fine-tuning PWM signals for millimeter accuracy</li>
+								<li><strong>Live Data:</strong> Real-time weather updates via REST API</li>
+								<li><strong>Clean UI:</strong> Responsive design with gradient styling</li>
+								<li><strong>Multiple Cities:</strong> Save and switch between locations</li>
+								<li><strong>Error Handling:</strong> Graceful fallbacks for API failures</li>
 							</ul>
 
-							<h5>Programming Approach:</h5>
+							<h5>Tech Stack:</h5>
 							<ul>
-								<li>Direct servo control using PWM signal generation</li>
-								<li>Real-time position feedback through encoder readings</li>
-								<li>Custom motion planning algorithms in C++</li>
-								<li>Hardware abstraction layer for cross-platform compatibility</li>
+								<li>JavaScript (ES6) for API calls and DOM manipulation</li>
+								<li>CSS3 with gradients and animations</li>
+								<li>LocalStorage for city preferences</li>
+								<li>OpenWeatherMap API integration</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 
-				<!-- Demo 2: Robot Arm Juggling/Dancing -->
+				<!-- Project 2: Command Line Productivity Tool -->
 				<div class="blog-highlight" style="margin-bottom: 50px; border: 1px solid #ddd; border-radius: 8px; padding: 24px; background: #fafbfc; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-					<h3 style="margin-bottom: 20px; color: #d85030;">Demo 2: Dynamic Movement Choreography</h3>
+					<h3 style="margin-bottom: 20px; color: #00b894;">⚡ CLI Task Automation Tool</h3>
 					<div class="row">
 						<div class="col-sm-6">
-							<h4>Project Overview</h4>
+							<h4>Quick Build Overview</h4>
 							<p>
-								<strong>Creating entertaining robotic movements that push the limits of the hardware.</strong> This demo showcases rapid acceleration, complex motion patterns, and the fun side of robotics programming.
+								<strong>A custom command-line tool that automates repetitive development tasks.</strong> Created to speed up daily workflow and practice systems programming.
 							</p>
 							
-							<h5>Technical Features:</h5>
+							<h5>Features:</h5>
 							<ul>
-								<li><strong>High-Speed Control:</strong> Rapid joint movements with acceleration limiting</li>
-								<li><strong>Motion Sequencing:</strong> Choreographed movement patterns</li>
-								<li><strong>Safety Systems:</strong> Emergency stops and collision avoidance</li>
-								<li><strong>Performance Optimization:</strong> Minimizing latency in control loops</li>
+								<li><strong>Git Shortcuts:</strong> Streamlined commit and push workflows</li>
+								<li><strong>Project Setup:</strong> Automatically create project boilerplate</li>
+								<li><strong>File Organization:</strong> Batch rename and organize downloads</li>
+								<li><strong>System Stats:</strong> Quick system resource monitoring</li>
 							</ul>
 
-							<h5>Implementation Details:</h5>
+							<h5>Implementation:</h5>
 							<ul>
-								<li>Interrupt-driven servo control for precise timing</li>
-								<li>Custom motion profiles with velocity and acceleration curves</li>
-								<li>Real-time sensor monitoring for safety</li>
-								<li>Modular command system for easy choreography editing</li>
+								<li>Python with Click framework for CLI interface</li>
+								<li>Subprocess calls for system integration</li>
+								<li>Configuration file support (YAML)</li>
+								<li>Cross-platform compatibility (Windows/Linux)</li>
 							</ul>
 						</div>
 						<div class="col-sm-6">
-							<div style="background: #f0f0f0; border: 2px dashed #ccc; padding: 30px; border-radius: 8px; text-align: center;">
-								<h4 style="color: #666; margin-bottom: 15px;">🕺 Robot Dancing Demo</h4>
-								<p style="color: #888;">Video placeholder for robot arm dynamic movements</p>
-								<div style="width: 100%; height: 200px; background: #ddd; margin: 15px auto; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
-									<span style="color: #999; font-size: 1.1em;">Robot Arm Dancing Video</span>
+							<div style="background: #2d3436; border-radius: 8px; padding: 20px; font-family: 'Courier New', monospace; color: #00ff00; font-size: 12px; overflow-x: auto;">
+								<div style="margin-bottom: 10px;">
+									<span style="color: #74b9ff;">$</span> <span style="color: #fdcb6e;">quicktask</span> --help
 								</div>
-								<p style="color: #888; font-size: 0.9em;">Watch the robot perform entertaining choreographed movements</p>
+								<div style="margin-left: 10px; color: #ddd;">
+									Usage: quicktask [OPTIONS] COMMAND<br><br>
+									<span style="color: #00b894;">Commands:</span><br>
+									  git-flow    Streamlined git operations<br>
+									  new-project Create project boilerplate<br>
+									  organize    Batch file operations<br>
+									  sysinfo     System resource monitor<br><br>
+								</div>
+								<div>
+									<span style="color: #74b9ff;">$</span> <span style="color: #fdcb6e;">quicktask</span> git-flow "Add new feature"
+								</div>
+								<div style="margin-left: 10px; color: #00ff00;">
+									✓ Changes staged<br>
+									✓ Commit created<br>
+									✓ Pushed to origin/main<br>
+								</div>
 							</div>
+							<p style="color: #888; font-size: 0.9em; text-align: center; margin-top: 15px;">Terminal output showing automated workflow</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Project 3: Data Visualization Experiment -->
+				<div class="blog-highlight" style="margin-bottom: 50px; border: 1px solid #ddd; border-radius: 8px; padding: 24px; background: #fafbfc; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+					<h3 style="margin-bottom: 20px; color: #e17055;">📊 Interactive Data Visualization</h3>
+					<div class="row">
+						<div class="col-sm-6">
+							<div style="background: #fff; border: 2px solid #ddd; border-radius: 8px; padding: 20px; text-align: center;">
+								<h4 style="color: #666; margin-bottom: 15px;">Portfolio Project Analytics</h4>
+								<div style="display: flex; justify-content: space-around; margin: 20px 0;">
+									<div style="text-align: center;">
+										<div style="width: 60px; height: 60px; background: #74b9ff; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">85%</div>
+										<small>Code Coverage</small>
+									</div>
+									<div style="text-align: center;">
+										<div style="width: 60px; height: 60px; background: #00b894; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">12</div>
+										<small>Projects</small>
+									</div>
+									<div style="text-align: center;">
+										<div style="width: 60px; height: 60px; background: #fdcb6e; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">7</div>
+										<small>Languages</small>
+									</div>
+								</div>
+								<div style="background: #f1f2f6; padding: 10px; border-radius: 4px; margin-top: 15px;">
+									<div style="display: flex; justify-content: space-between; font-size: 0.85em;">
+										<span>JavaScript</span><span>▓▓▓▓▓░░</span><span>68%</span>
+									</div>
+									<div style="display: flex; justify-content: space-between; font-size: 0.85em;">
+										<span>Python</span><span>▓▓▓▓░░░</span><span>52%</span>
+									</div>
+									<div style="display: flex; justify-content: space-between; font-size: 0.85em;">
+										<span>C++</span><span>▓▓▓░░░░</span><span>34%</span>
+									</div>
+								</div>
+							</div>
+							<p style="color: #888; font-size: 0.9em; text-align: center; margin-top: 15px;">Sample dashboard showing project metrics</p>
+						</div>
+						<div class="col-sm-6">
+							<h4>Quick Build Overview</h4>
+							<p>
+								<strong>An interactive dashboard for visualizing coding project data.</strong> Experimented with Chart.js and D3.js to create engaging visual representations of development metrics.
+							</p>
+							
+							<h5>Features:</h5>
+							<ul>
+								<li><strong>Real-time Charts:</strong> Dynamic updates with smooth animations</li>
+								<li><strong>GitHub Integration:</strong> Pulls data from GitHub API</li>
+								<li><strong>Custom Metrics:</strong> Code complexity, language distribution</li>
+								<li><strong>Export Options:</strong> Save charts as PNG/SVG</li>
+							</ul>
+
+							<h5>Learning Goals:</h5>
+							<ul>
+								<li>Master Chart.js and D3.js libraries</li>
+								<li>Practice with GitHub API and OAuth</li>
+								<li>Responsive chart design patterns</li>
+								<li>Performance optimization for large datasets</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Project 4: Browser Extension -->
+				<div class="blog-highlight" style="margin-bottom: 50px; border: 1px solid #ddd; border-radius: 8px; padding: 24px; background: #fafbfc; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+					<h3 style="margin-bottom: 20px; color: #a29bfe;">🔧 Productivity Browser Extension</h3>
+					<div class="row">
+						<div class="col-sm-6">
+							<h4>Quick Build Overview</h4>
+							<p>
+								<strong>A Chrome extension that enhances web browsing productivity.</strong> Built to learn browser extension development and solve personal workflow inefficiencies.
+							</p>
+							
+							<h5>Features:</h5>
+							<ul>
+								<li><strong>Quick Notes:</strong> Save notes per website/domain</li>
+								<li><strong>Time Tracking:</strong> Monitor time spent on different sites</li>
+								<li><strong>Link Shortcuts:</strong> Custom keyboard shortcuts for frequently visited pages</li>
+								<li><strong>Dark Mode Toggle:</strong> Universal dark mode for any website</li>
+							</ul>
+
+							<h5>Technical Challenges:</h5>
+							<ul>
+								<li>Chrome Extension API and manifest v3</li>
+								<li>Content script injection and DOM manipulation</li>
+								<li>Background service workers for persistent data</li>
+								<li>Cross-origin request handling</li>
+							</ul>
+						</div>
+						<div class="col-sm-6">
+							<div style="background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 8px; padding: 20px;">
+								<div style="background: #6f42c1; color: white; padding: 10px; border-radius: 4px 4px 0 0; text-align: center; font-weight: bold;">
+									⚡ ProductivityBoost Extension
+								</div>
+								<div style="background: white; padding: 15px; border-radius: 0 0 4px 4px;">
+									<div style="margin-bottom: 15px;">
+										<label style="display: block; font-size: 0.9em; color: #666; margin-bottom: 5px;">Quick Note for this site:</label>
+										<textarea style="width: 100%; height: 60px; border: 1px solid #ddd; border-radius: 3px; padding: 8px; font-size: 0.85em;" placeholder="Remember to check the API docs..."></textarea>
+									</div>
+									<div style="display: flex; justify-content: space-between; font-size: 0.85em;">
+										<div>
+											<span style="color: #666;">Time on site:</span>
+											<strong style="color: #28a745;">23m 45s</strong>
+										</div>
+										<button style="background: #6f42c1; color: white; border: none; padding: 5px 10px; border-radius: 3px; font-size: 0.8em;">🌙 Dark Mode</button>
+									</div>
+								</div>
+							</div>
+							<p style="color: #888; font-size: 0.9em; text-align: center; margin-top: 15px;">Extension popup interface mockup</p>
 						</div>
 					</div>
 				</div>
@@ -342,7 +469,7 @@ public:
 				</section>
 
 				<p style="text-align:center; font-style: italic; margin-top: 30px;">
-					Where hardware meets software, precision meets creativity, and robots occasionally get silly! 🤖
+					Small experiments lead to big discoveries! 🚀✨
 				</p>
 			</div>
 		</div>
