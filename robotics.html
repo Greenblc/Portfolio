@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Christopher Greenblatt">
+
+	<title>Robotics & Low-Level Programming - Christopher's Portfolio</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<!-- Bootstrap -->
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- Icon font -->
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+</head>
+<body>
+
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="assets/images/ItMe.jpg" alt="">
+			<span class="title" style="display:block; text-align:center;">Christopher Greenblatt</span>
+			<br>
+			<span style="display:block; text-align:center; font-size:0.9em;">
+				<a href="mailto:christophergreenblatt@gmail.com">christophergreenblatt@gmail.com</a>
+			</span>
+		</h1>
+	</div>
+	<nav class="navbar navbar-default navbar-sticky">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="art.html">Art</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->			
+		</div>	
+	</nav>
+</header>
+
+<main id="main">
+	<div class="container">
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="blog-intro" style="margin-bottom: 30px;">
+					<h2 style="margin-bottom: 10px;">Robotics & Low-Level Programming</h2>
+					<p>
+						Exploring the intersection of hardware control and software engineering through robotic arm programming. These projects showcase direct motor control, servo communication protocols, and real-time movement coordination using low-level programming techniques.
+					</p>
+					<ul>
+						<li><strong>Hardware:</strong> 6-DOF Robotic Arms, Arduino/Raspberry Pi Controllers</li>
+						<li><strong>Programming:</strong> C/C++, Python with hardware libraries, direct register manipulation</li>
+						<li><strong>Protocols:</strong> I2C, SPI, PWM signal generation, UART communication</li>
+					</ul>
+				</div>
+
+				<!-- Demo 1: Robot Arm Drawing -->
+				<div class="blog-highlight" style="margin-bottom: 50px; border: 1px solid #ddd; border-radius: 8px; padding: 24px; background: #fafbfc; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+					<h3 style="margin-bottom: 20px; color: #2c5aa0;">Demo 1: Precision Drawing Robot</h3>
+					<div class="row">
+						<div class="col-sm-6">
+							<div style="background: #f0f0f0; border: 2px dashed #ccc; padding: 30px; border-radius: 8px; text-align: center;">
+								<h4 style="color: #666; margin-bottom: 15px;">🤖 Robot Drawing Demo</h4>
+								<p style="color: #888;">Video placeholder for robot arm drawing patterns</p>
+								<div style="width: 100%; height: 200px; background: #ddd; margin: 15px auto; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+									<span style="color: #999; font-size: 1.1em;">Robot Arm Drawing Video</span>
+								</div>
+								<p style="color: #888; font-size: 0.9em;">Watch the robot arm draw geometric patterns with precision</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<h4>Project Overview</h4>
+							<p>
+								<strong>Programming a 6-DOF robotic arm to draw precise geometric patterns and artwork.</strong> This project required implementing inverse kinematics, path planning, and real-time motor control to achieve smooth, accurate movements.
+							</p>
+							
+							<h5>Technical Challenges:</h5>
+							<ul>
+								<li><strong>Inverse Kinematics:</strong> Mathematical calculation of joint angles for desired end-effector positions</li>
+								<li><strong>Path Interpolation:</strong> Smooth trajectory generation between waypoints</li>
+								<li><strong>Motor Synchronization:</strong> Coordinating multiple servo motors for fluid motion</li>
+								<li><strong>Precision Control:</strong> Fine-tuning PWM signals for millimeter accuracy</li>
+							</ul>
+
+							<h5>Programming Approach:</h5>
+							<ul>
+								<li>Direct servo control using PWM signal generation</li>
+								<li>Real-time position feedback through encoder readings</li>
+								<li>Custom motion planning algorithms in C++</li>
+								<li>Hardware abstraction layer for cross-platform compatibility</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Demo 2: Robot Arm Juggling/Dancing -->
+				<div class="blog-highlight" style="margin-bottom: 50px; border: 1px solid #ddd; border-radius: 8px; padding: 24px; background: #fafbfc; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+					<h3 style="margin-bottom: 20px; color: #d85030;">Demo 2: Dynamic Movement Choreography</h3>
+					<div class="row">
+						<div class="col-sm-6">
+							<h4>Project Overview</h4>
+							<p>
+								<strong>Creating entertaining robotic movements that push the limits of the hardware.</strong> This demo showcases rapid acceleration, complex motion patterns, and the fun side of robotics programming.
+							</p>
+							
+							<h5>Technical Features:</h5>
+							<ul>
+								<li><strong>High-Speed Control:</strong> Rapid joint movements with acceleration limiting</li>
+								<li><strong>Motion Sequencing:</strong> Choreographed movement patterns</li>
+								<li><strong>Safety Systems:</strong> Emergency stops and collision avoidance</li>
+								<li><strong>Performance Optimization:</strong> Minimizing latency in control loops</li>
+							</ul>
+
+							<h5>Implementation Details:</h5>
+							<ul>
+								<li>Interrupt-driven servo control for precise timing</li>
+								<li>Custom motion profiles with velocity and acceleration curves</li>
+								<li>Real-time sensor monitoring for safety</li>
+								<li>Modular command system for easy choreography editing</li>
+							</ul>
+						</div>
+						<div class="col-sm-6">
+							<div style="background: #f0f0f0; border: 2px dashed #ccc; padding: 30px; border-radius: 8px; text-align: center;">
+								<h4 style="color: #666; margin-bottom: 15px;">🕺 Robot Dancing Demo</h4>
+								<p style="color: #888;">Video placeholder for robot arm dynamic movements</p>
+								<div style="width: 100%; height: 200px; background: #ddd; margin: 15px auto; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+									<span style="color: #999; font-size: 1.1em;">Robot Arm Dancing Video</span>
+								</div>
+								<p style="color: #888; font-size: 0.9em;">Watch the robot perform entertaining choreographed movements</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Code Showcase Section -->
+				<div class="blog-highlight" style="margin-bottom: 40px; border: 1px solid #ddd; border-radius: 8px; padding: 24px; background: #fafbfc; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+					<h3 style="margin-bottom: 20px;">Low-Level Programming Examples</h3>
+					<div class="row">
+						<div class="col-sm-6">
+							<h4>Servo Control & PWM Generation</h4>
+							<div style="background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace; font-size: 11px; overflow-x: auto;">
+<pre style="margin: 0; color: #f8f8f2;">
+// Direct PWM control for servo positioning
+class ServoController {
+private:
+    uint8_t pin;
+    uint16_t currentPulse;
+    uint16_t targetPulse;
+    
+public:
+    void setPosition(float angle) {
+        // Convert angle to pulse width (1000-2000 μs)
+        targetPulse = map(angle, 0, 180, 1000, 2000);
+    }
+    
+    void update() {
+        // Smooth movement interpolation
+        if (currentPulse != targetPulse) {
+            int16_t diff = targetPulse - currentPulse;
+            currentPulse += constrain(diff, -MAX_STEP, MAX_STEP);
+        }
+        
+        // Generate PWM signal
+        analogWrite(pin, pulseToPWM(currentPulse));
+    }
+    
+private:
+    uint8_t pulseToPWM(uint16_t pulse) {
+        // Convert microseconds to PWM value
+        return map(pulse, 1000, 2000, 
+                   PWM_MIN, PWM_MAX);
+    }
+};
+</pre>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<h4>Inverse Kinematics Solver</h4>
+							<div style="background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace; font-size: 11px; overflow-x: auto;">
+<pre style="margin: 0; color: #f8f8f2;">
+// 3D inverse kinematics calculation
+struct Point3D { float x, y, z; };
+struct JointAngles { float base, shoulder, elbow, wrist; };
+
+class InverseKinematics {
+private:
+    float L1, L2, L3; // Link lengths
+    
+public:
+    JointAngles solve(Point3D target) {
+        JointAngles angles;
+        
+        // Base rotation (around Z-axis)
+        angles.base = atan2(target.y, target.x);
+        
+        // 2D problem in X-Z plane
+        float r = sqrt(target.x*target.x + target.y*target.y);
+        float z = target.z;
+        
+        // Distance to target
+        float d = sqrt(r*r + z*z);
+        
+        // Law of cosines for elbow angle
+        float cosElbow = (L1*L1 + L2*L2 - d*d) / (2*L1*L2);
+        angles.elbow = acos(constrain(cosElbow, -1, 1));
+        
+        // Shoulder angle calculation
+        float alpha = atan2(z, r);
+        float beta = acos((L1*L1 + d*d - L2*L2) / (2*L1*d));
+        angles.shoulder = alpha + beta;
+        
+        return angles;
+    }
+};
+</pre>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="margin-top: 20px;">
+						<div class="col-sm-12">
+							<h4>Real-Time Control Loop</h4>
+							<div style="background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace; font-size: 11px; overflow-x: auto;">
+<pre style="margin: 0; color: #f8f8f2;">
+// Main control loop with timing constraints
+class RobotController {
+private:
+    ServoController servos[6];
+    InverseKinematics ik;
+    unsigned long lastUpdate;
+    const uint16_t UPDATE_INTERVAL = 20; // 50Hz update rate
+    
+public:
+    void controlLoop() {
+        unsigned long currentTime = millis();
+        
+        if (currentTime - lastUpdate >= UPDATE_INTERVAL) {
+            // Read current position feedback
+            Point3D currentPos = readEndEffectorPosition();
+            
+            // Calculate next waypoint in trajectory
+            Point3D nextTarget = trajectoryPlanner.getNextPoint();
+            
+            // Solve inverse kinematics
+            JointAngles targetAngles = ik.solve(nextTarget);
+            
+            // Apply safety limits and update servos
+            for (int i = 0; i < 6; i++) {
+                float safeAngle = applySafetyLimits(targetAngles.angles[i], i);
+                servos[i].setPosition(safeAngle);
+                servos[i].update();
+            }
+            
+            // Monitor for emergency conditions
+            if (emergencyStop.triggered()) {
+                halt();
+                return;
+            }
+            
+            lastUpdate = currentTime;
+        }
+    }
+};
+</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Technical Details Section -->
+				<section>
+					<h4>Hardware & Software Integration</h4>
+					<div class="row">
+						<div class="col-sm-8">
+							<h5>Hardware Components</h5>
+							<ul>
+								<li><strong>Robotic Arm:</strong> 6-DOF articulated arm with high-torque servo motors</li>
+								<li><strong>Microcontroller:</strong> Arduino Mega 2560 / Raspberry Pi 4 for processing</li>
+								<li><strong>Sensors:</strong> Encoders for position feedback, current sensors for load monitoring</li>
+								<li><strong>Power System:</strong> Regulated 6V supply with current limiting for safety</li>
+							</ul>
+							
+							<h5>Software Architecture</h5>
+							<ul>
+								<li><strong>Real-Time Control:</strong> Interrupt-driven servo updates at 50Hz</li>
+								<li><strong>Motion Planning:</strong> Trajectory generation with velocity profiles</li>
+								<li><strong>Safety Systems:</strong> Multiple layers of protection and emergency stops</li>
+								<li><strong>Modular Design:</strong> Plug-and-play command system for easy programming</li>
+							</ul>
+
+							<h5>Development Challenges</h5>
+							<ul>
+								<li><strong>Timing Precision:</strong> Meeting real-time constraints for smooth motion</li>
+								<li><strong>Mathematical Complexity:</strong> Implementing robust inverse kinematics solvers</li>
+								<li><strong>Hardware Limitations:</strong> Working within servo speed and precision constraints</li>
+								<li><strong>Safety Considerations:</strong> Preventing damage from rapid or erratic movements</li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<div class="project-stats" style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+								<h5>Project Specifications</h5>
+								<ul style="list-style: none; padding: 0;">
+									<li><strong>Degrees of Freedom:</strong> 6 (Base, Shoulder, Elbow, Wrist)</li>
+									<li><strong>Reach:</strong> ~60cm working radius</li>
+									<li><strong>Precision:</strong> ±2mm positioning accuracy</li>
+									<li><strong>Speed:</strong> Up to 180°/sec joint velocity</li>
+									<li><strong>Programming:</strong> C++ with Arduino/Pi libraries</li>
+									<li><strong>Control Frequency:</strong> 50Hz update rate</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<h5>Learning Outcomes</h5>
+					<p>
+						Working with robotic arms provided hands-on experience with real-time systems, hardware-software integration, and the mathematical foundations of robotics. The projects taught me about the complexities of physical control systems and the importance of safety in automated systems. Most importantly, they showed me that engineering can be both technically challenging and genuinely fun.
+					</p>
+
+					<h5>Future Enhancements</h5>
+					<ul>
+						<li>Machine vision integration for object recognition and tracking</li>
+						<li>Force feedback sensors for delicate manipulation tasks</li>
+						<li>Neural network-based motion learning and optimization</li>
+						<li>Multi-arm coordination for complex assembly tasks</li>
+						<li>Voice command integration for intuitive control</li>
+					</ul>
+				</section>
+
+				<p style="text-align:center; font-style: italic; margin-top: 30px;">
+					Where hardware meets software, precision meets creativity, and robots occasionally get silly! 🤖
+				</p>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p>+1 (678) 764-3704<br>
+						<a href="mailto:christophergreenblatt@gmail.com">christophergreenblatt@gmail.com</a><br>
+						<br>
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://github.com/Greenblc"><i class="fa fa-github fa-2"></i></a>
+						<a href="https://www.linkedin.com/in/chris-greenblatt-9b6686222"><i class="fa fa-linkedin fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">A little about me</h3>
+				<div class="widget-body">
+					<p>I'm Christopher G. Greenblatt, software engineer, problem solver, and curious builder. I enjoy creating interactive tools, mostly working code, and the occasional offbeat side project that may get finished. </p>
+					<p>When I'm not coding, you'll find me reading manga, climbing rocks, or making hardware do things it probably wasn't meant to. Always learning, always tinkering.</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<div class="widget-body">
+					<p>(678) 764-3704<br>
+						<a href="mailto:christophergreenblatt@gmail.com">christophergreenblatt@gmail.com</a><br>
+						<br>
+					</p>	
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/template.js"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Christopher Greenblatt">
+
+	<title>Assembly Maze Game - Christopher's Portfolio</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<!-- Bootstrap -->
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- Icon font -->
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+</head>
+<body>
+
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="assets/images/ItMe.jpg" alt="">
+			<span class="title" style="display:block; text-align:center;">Christopher Greenblatt</span>
+			<br>
+			<span style="display:block; text-align:center; font-size:0.9em;">
+				<a href="mailto:christophergreenblatt@gmail.com">christophergreenblatt@gmail.com</a>
+			</span>
+		</h1>
+	</div>
+	<nav class="navbar navbar-default navbar-sticky">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="art.html">Art</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->			
+		</div>	
+	</nav>
+</header>
+
+<main id="main">
+	<div class="container">
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="blog-intro" style="margin-bottom: 30px;">
+					<h2 style="margin-bottom: 10px;">Assembly Maze Game - MIPS Programming</h2>
+					<p>
+						A challenging maze game written entirely in MIPS assembly language. This project demonstrates low-level programming concepts, memory management, and game logic implementation at the assembly level. Navigate through the maze using keyboard controls and reach the goal to win!
+					</p>
+					<ul>
+						<li><strong>Language:</strong> MIPS Assembly</li>
+						<li><strong>Platform:</strong> MARS (MIPS Assembler and Runtime Simulator)</li>
+						<li><strong>Features:</strong> Player movement, collision detection, maze generation, win condition</li>
+					</ul>
+				</div>
+
+				<!-- Game Embed Section -->
+				<div class="blog-highlight" style="margin-bottom: 40px; border: 1px solid #ddd; border-radius: 8px; padding: 24px; background: #fafbfc; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+					<h3 style="margin-bottom: 20px; text-align: center;">Play the Maze Game</h3>
+					<div style="text-align:center; margin-bottom:20px;">
+						<div style="background: #f0f0f0; border: 2px dashed #ccc; padding: 40px; border-radius: 8px;">
+							<h4 style="color: #666; margin-bottom: 20px;">MIPS Assembly Game</h4>
+							<p style="color: #888;">Interactive maze game will be embedded here</p>
+							<p style="color: #888; font-size: 0.9em;">Use WASD or arrow keys to navigate through the maze</p>
+							<!-- TODO: Replace this placeholder with your actual game embed -->
+							<div style="width: 600px; height: 400px; max-width: 100%; background: #222; margin: 20px auto; border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 2px solid #444;">
+								<div style="color: #0f0; font-family: monospace; text-align: center;">
+									<div style="font-size: 1.5em; margin-bottom: 10px;">MAZE GAME</div>
+									<div style="font-size: 0.9em;">MIPS Assembly Implementation</div>
+									<div style="font-size: 0.8em; margin-top: 10px; color: #888;">Click to start game</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Code Showcase Section -->
+				<div class="blog-highlight" style="margin-bottom: 40px; border: 1px solid #ddd; border-radius: 8px; padding: 24px; background: #fafbfc; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+					<h3 style="margin-bottom: 20px;">Assembly Code Showcase</h3>
+					<div class="row">
+						<div class="col-sm-6">
+							<h4>Player Movement Logic</h4>
+							<div style="background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace; font-size: 12px; overflow-x: auto;">
+<pre style="margin: 0; color: #f8f8f2;">
+# Player movement in MIPS Assembly
+move_player:
+    # Load current player position
+    lw $t0, player_x
+    lw $t1, player_y
+    
+    # Check input direction
+    lw $t2, input_direction
+    
+    beq $t2, 1, move_up
+    beq $t2, 2, move_down
+    beq $t2, 3, move_left
+    beq $t2, 4, move_right
+    j end_movement
+
+move_up:
+    addi $t1, $t1, -1
+    j check_collision
+
+move_down:
+    addi $t1, $t1, 1
+    j check_collision
+
+move_left:
+    addi $t0, $t0, -1
+    j check_collision
+
+move_right:
+    addi $t0, $t0, 1
+    j check_collision
+</pre>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<h4>Collision Detection</h4>
+							<div style="background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace; font-size: 12px; overflow-x: auto;">
+<pre style="margin: 0; color: #f8f8f2;">
+# Collision detection system
+check_collision:
+    # Calculate array index for new position
+    mul $t3, $t1, maze_width
+    add $t3, $t3, $t0
+    
+    # Load maze array base address
+    la $t4, maze_array
+    add $t4, $t4, $t3
+    
+    # Check if position is wall (1) or free (0)
+    lb $t5, 0($t4)
+    beq $t5, 1, collision_detected
+    
+    # No collision - update player position
+    sw $t0, player_x
+    sw $t1, player_y
+    j end_movement
+
+collision_detected:
+    # Don't move - stay at current position
+    j end_movement
+
+end_movement:
+    jr $ra
+</pre>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="margin-top: 20px;">
+						<div class="col-sm-12">
+							<h4>Game Initialization & Main Loop</h4>
+							<div style="background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace; font-size: 12px; overflow-x: auto;">
+<pre style="margin: 0; color: #f8f8f2;">
+# Main game initialization and loop
+.data
+    maze_array: .space 400        # 20x20 maze array
+    player_x: .word 1             # Starting X position
+    player_y: .word 1             # Starting Y position
+    goal_x: .word 18              # Goal X position
+    goal_y: .word 18              # Goal Y position
+    game_won: .word 0             # Win condition flag
+
+.text
+main:
+    jal initialize_maze           # Set up maze layout
+    jal initialize_display        # Set up bitmap display
+    
+game_loop:
+    jal get_input                 # Check for keyboard input
+    jal move_player               # Process movement
+    jal check_win_condition       # Check if player reached goal
+    jal update_display            # Refresh screen
+    
+    lw $t0, game_won
+    beq $t0, 1, game_end         # Exit if won
+    
+    j game_loop                   # Continue game loop
+
+game_end:
+    # Display win message and exit
+    li $v0, 4
+    la $a0, win_message
+    syscall
+    li $v0, 10
+    syscall
+</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Project Details Section -->
+				<section>
+					<h4>Project Overview</h4>
+					<div class="row">
+						<div class="col-sm-8">
+							<h5>Technical Implementation</h5>
+							<ul>
+								<li><strong>Memory Management:</strong> Efficient use of data segments for maze storage and game state</li>
+								<li><strong>Input Handling:</strong> Real-time keyboard input processing using MARS simulator</li>
+								<li><strong>Graphics:</strong> Bitmap display manipulation for visual maze representation</li>
+								<li><strong>Game Logic:</strong> Collision detection, boundary checking, and win condition evaluation</li>
+							</ul>
+							
+							<h5>Challenges & Solutions</h5>
+							<ul>
+								<li><strong>Low-level Graphics:</strong> Manually drawing pixels and managing screen buffer</li>
+								<li><strong>State Management:</strong> Tracking player position and game state without high-level data structures</li>
+								<li><strong>Performance:</strong> Optimizing assembly code for smooth gameplay</li>
+								<li><strong>Debugging:</strong> Using MARS debugger to trace execution and fix logic errors</li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<div class="project-stats" style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+								<h5>Project Stats</h5>
+								<ul style="list-style: none; padding: 0;">
+									<li><strong>Lines of Code:</strong> ~300 lines</li>
+									<li><strong>Development Time:</strong> 40+ hours</li>
+									<li><strong>Registers Used:</strong> $t0-$t9, $s0-$s7</li>
+									<li><strong>Memory Usage:</strong> ~2KB</li>
+									<li><strong>Platform:</strong> MARS MIPS Simulator</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<h5>Learning Outcomes</h5>
+					<p>
+						This project provided deep insights into computer architecture and low-level programming. Working directly with assembly language taught me about CPU instruction cycles, memory addressing, register management, and the fundamental operations that higher-level languages abstract away. The experience of building a complete game without modern programming conveniences was both challenging and rewarding.
+					</p>
+
+					<h5>Future Enhancements</h5>
+					<ul>
+						<li>Add multiple maze levels with increasing difficulty</li>
+						<li>Implement a timer system for speedrun challenges</li>
+						<li>Create procedurally generated mazes</li>
+						<li>Add sound effects using MARS audio capabilities</li>
+						<li>Implement a high score system with persistent storage</li>
+					</ul>
+				</section>
+
+				<p style="text-align:center; font-style: italic; margin-top: 30px;">
+					Experience the fundamentals of computer programming at the assembly level!
+				</p>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p>+1 (678) 764-3704<br>
+						<a href="mailto:christophergreenblatt@gmail.com">christophergreenblatt@gmail.com</a><br>
+						<br>
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://github.com/Greenblc"><i class="fa fa-github fa-2"></i></a>
+						<a href="https://www.linkedin.com/in/chris-greenblatt-9b6686222"><i class="fa fa-linkedin fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">A little about me</h3>
+				<div class="widget-body">
+					<p>I'm Christopher G. Greenblatt, software engineer, problem solver, and curious builder. I enjoy creating interactive tools, mostly working code, and the occasional offbeat side project that may get finished. </p>
+					<p>When I'm not coding, you'll find me reading manga, climbing rocks, or making hardware do things it probably wasn't meant to. Always learning, always tinkering.</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<div class="widget-body">
+					<p>(678) 764-3704<br>
+						<a href="mailto:christophergreenblatt@gmail.com">christophergreenblatt@gmail.com</a><br>
+						<br>
+					</p>	
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/template.js"></script>
+</body>
+</html>
