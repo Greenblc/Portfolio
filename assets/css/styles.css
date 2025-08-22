@@ -903,24 +903,24 @@ footer.entry-meta .meta-in {
 }
 
 /* Dark theme thumbnail styling */
-.container .thumbnail {
+.thumbnail {
   background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
   border: 1px solid #1a1a1a;
   color: #ecf0f1;
 }
 
-.container .thumbnail .title {
+.thumbnail .title {
   color: #ecf0f1;
   padding: 15px;
   background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
   margin: 0;
 }
 
-.container .thumbnail .cover {
+.thumbnail .cover {
   background-color: rgba(30, 30, 30, 0.9);
 }
 
-.container .thumbnail .cover .more {
+.thumbnail .cover .more {
   color: #3498db;
   font-weight: bold;
 }
@@ -946,4 +946,24 @@ footer.entry-meta .meta-in {
 .container .btn-primary:hover {
   background-color: #2980b9;
   border-color: #2980b9;
+}
+
+.container p {
+  color: #ecf0f1;
+}
+
+.container article {
+  color: #ecf0f1;
+}
+
+.container ul li {
+  color: #ecf0f1;
+}
+
+.container a {
+  color: #3498db;
+}
+
+.container a:hover {
+  color: #2980b9;
 }
