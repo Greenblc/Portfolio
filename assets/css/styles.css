@@ -992,6 +992,32 @@ footer.entry-meta .meta-in {
   color: #2980b9;
 }
 
+/* Ultra-specific overrides for stubborn inline styles */
+.container div[style*="background: #fafbfc"],
+.container div[style*="background:#fafbfc"],
+div.blog-highlight[style*="background"],
+div.container .blog-highlight {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%) !important;
+  border: 1px solid #1a1a1a !important;
+  color: #ecf0f1 !important;
+}
+
+.container div[style*="background: #fafbfc"] *,
+.container div[style*="background:#fafbfc"] *,
+div.blog-highlight[style*="background"] *,
+div.container .blog-highlight * {
+  color: #ecf0f1 !important;
+}
+
+/* Force all white/light backgrounds in containers to be dark */
+.container div[style*="background: #fff"],
+.container div[style*="background: white"],
+.container div[style*="background:#fff"],
+.container div[style*="background:white"] {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%) !important;
+  color: #ecf0f1 !important;
+}
+
 /* Fix for specific project pages with inline light backgrounds */
 .blog-highlight {
   background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%) !important;
