@@ -1044,6 +1044,45 @@ div.container .blog-highlight * {
   color: #3498db !important;
 }
 
+/* Low-level page and other light background fixes */
+div[style*="background: #fafbfc"],
+div[style*="background:#fafbfc"],
+div[style*="background: #f8f9fa"],
+div[style*="background:#f8f9fa"] {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%) !important;
+  border-color: #3a3a3a !important;
+  color: #ecf0f1 !important;
+}
+
+div[style*="background: #fafbfc"] *,
+div[style*="background:#fafbfc"] *,
+div[style*="background: #f8f9fa"] *,
+div[style*="background:#f8f9fa"] * {
+  color: #ecf0f1 !important;
+}
+
+div[style*="background: #fafbfc"] h3,
+div[style*="background:#fafbfc"] h3,
+div[style*="background: #f8f9fa"] h3,
+div[style*="background:#f8f9fa"] h3,
+div[style*="background: #fafbfc"] h4,
+div[style*="background:#fafbfc"] h4,
+div[style*="background: #f8f9fa"] h4,
+div[style*="background:#f8f9fa"] h4 {
+  color: #3498db !important;
+}
+
+/* Project stats sections */
+.project-stats {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%) !important;
+  color: #ecf0f1 !important;
+  border: 1px solid #3a3a3a !important;
+}
+
+.project-stats * {
+  color: #ecf0f1 !important;
+}
+
 .blog-intro h2, .blog-intro p {
   color: #ecf0f1 !important;
 }
