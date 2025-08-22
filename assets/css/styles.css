@@ -423,7 +423,7 @@ img {
   display: block;
   opacity: 0;
   width: 100%;
-  height: 180px;
+  height: 100%;
   background-color: rgba(30, 30, 30, 0.9);
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -842,7 +842,7 @@ footer.entry-meta .meta-in {
 /* Project Thumbnail Styles */
 .project-thumbnail {
   display: block;
-  aspect-ratio: 3/1;
+  aspect-ratio: 2.5/1;
   overflow: hidden;
   width: 100%;
   max-width: 700px;
@@ -852,6 +852,7 @@ footer.entry-meta .meta-in {
 .project-thumbnail .img {
   height: 100%;
   display: block;
+  position: relative;
 }
 
 .project-thumbnail img {
@@ -865,6 +866,10 @@ footer.entry-meta .meta-in {
   display: block;
   font-size: 14px;
   line-height: 1.2;
+}
+
+.project-thumbnail .cover {
+  height: 100% !important;
 }
 
 @media (max-width: 767px) {
