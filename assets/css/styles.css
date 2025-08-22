@@ -343,8 +343,9 @@ img {
   font-weight: bold;
 }
 .panel-cta {
-  box-shadow: 0 0 0 1px #e1e1e1, 0 0 0 3px #fff, 0 0 0 4px #e1e1e1;
-  background: #f3f3f3;
+  box-shadow: 0 0 0 1px #3a3a3a, 0 0 0 3px #1e1e1e, 0 0 0 4px #3a3a3a;
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+  color: #ecf0f1;
   -webkit-border-radius: 0;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 0;
