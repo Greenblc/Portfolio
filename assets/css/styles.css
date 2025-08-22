@@ -902,6 +902,28 @@ footer.entry-meta .meta-in {
   color: #3498db;
 }
 
+/* Additional dark theme fixes for all pages */
+#main {
+  background: transparent;
+}
+
+.maincontent {
+  color: #ecf0f1;
+}
+
+.sidebar {
+  color: #ecf0f1;
+}
+
+/* Ensure navbar text is visible */
+.navbar-default .navbar-nav > li > a {
+  color: #333;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #e93675;
+}
+
 /* Dark theme thumbnail styling */
 .thumbnail {
   background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
@@ -939,13 +961,15 @@ footer.entry-meta .meta-in {
 }
 
 .container .btn-primary {
-  background-color: #3498db;
-  border-color: #3498db;
+  background-color: #e93675;
+  border-color: #e93675;
+  color: white;
 }
 
 .container .btn-primary:hover {
-  background-color: #2980b9;
-  border-color: #2980b9;
+  background-color: #e61f65;
+  border-color: #e61f65;
+  color: white;
 }
 
 .container p {
