@@ -905,7 +905,7 @@ footer.entry-meta .meta-in {
 /* Dark theme thumbnail styling */
 .container .thumbnail {
   background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
-  border: 1px solid #3a3a3a;
+  border: 1px solid #1a1a1a;
   color: #ecf0f1;
 }
 
