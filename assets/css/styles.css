@@ -7,6 +7,9 @@ body {
   font-family: "Open sans", Helvetica, Arial, sans-serif;
   color: #666666;
   padding: 0;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 .topspace {
   margin-top: 40px;
@@ -868,4 +871,33 @@ footer.entry-meta .meta-in {
     aspect-ratio: 2/1;
     max-width: 100%;
   }
+}
+
+/* Dark theme container styling */
+.container {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ecf0f1;
+}
+
+/* Footer styling for dark theme */
+#footer {
+  background-color: rgba(44, 62, 80, 0.95) !important;
+  color: #ecf0f1;
+}
+
+#footer .widget-title {
+  color: #3498db;
+}
+
+#footer a {
+  color: #ecf0f1;
+}
+
+#footer a:hover {
+  color: #3498db;
 }
